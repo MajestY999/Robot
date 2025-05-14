@@ -13,8 +13,8 @@ export default{
     name: 'PartsInfo',
     computed: {
         part(){
-            const{partInfo, id} = this.$route.params;
-            return parts  [partType].find(part => part.id === id)
+         const { partType, id } = this.$route.params;
+return parts[partType].find(part => part.id === id);
         }
     }
 }

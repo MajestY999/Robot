@@ -97,14 +97,16 @@ export default{
         }
     },
     methods:{
-      showPartInfo(){
-        this.$router.push({name: 'ЗАПЧАСТИ',
-       params: {
-        id: selectedPart.id,
-        PartType:selectedPart.type,
-       } 
-      })
-      },
+   showPartInfo(){
+  const selectedPart = this.selectedRobot.head;
+  this.$router.push({
+    name: 'ЗАПЧАСТИ',
+    params: {
+      id: selectedPart.id,
+      partType: 'heads'
+    }
+  });
+},
         addToCart(){
             const robot = this.selectedRobot;
             const cost = robot.head.cost +
